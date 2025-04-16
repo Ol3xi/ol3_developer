@@ -58,10 +58,10 @@ const Navbar: React.FC = () => {
             {/* Mobile menu dropdown */}
             {isOpen && (
                 <div className="md:hidden px-4 pb-4">
-                    <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">Home</a>
-                    <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">Servizi</a>
-                    <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">Chi siamo</a>
-                    <a href="#" className="block py-2 text-gray-700 hover:text-blue-600">Contatti</a>
+                    <a href="#home" className="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#servizi" className="block py-2 text-gray-700 hover:text-blue-600">Servizi</a>
+                    <a href="#chiSiamo" className="block py-2 text-gray-700 hover:text-blue-600">Chi siamo</a>
+                    <a href="#contatti" className="block py-2 text-gray-700 hover:text-blue-600">Contatti</a>
                 </div>
             )}
         </nav>
