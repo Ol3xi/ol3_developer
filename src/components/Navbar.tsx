@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -6,16 +7,17 @@ const Navbar: React.FC = () => {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <nav className="bg-white dark:bg-slate-800 shadow-md fixed top-0 left-0 w-full z-50 ">
             <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-2 font-poppins text-xl">
                     <span className="text-blue-600 text-2xl font-bold">&lt;/&gt;</span>
-                    <span className="text-xl md:text-2xl font-semibold text-gray-800">Ol3_Developer</span>
+                    <span className="text-xl md:text-2xl font-semibold text-gray-800 dark:text-white">Ol3_Developer</span>
                 </div>
 
                 {/* Desktop menu */}
-                <div className="hidden md:flex space-x-6 text-gray-700 font-medium">
+                <div className="hidden md:flex space-x-6 text-gray-700 font-medium dark:text-white">
+                    <ThemeToggle/>
                     <a href="#home" className="hover:text-blue-600 transition">Home</a>
                     <a href="#servizi" className="hover:text-blue-600 transition">Servizi</a>
                     <a href="#chiSiamo" className="hover:text-blue-600 transition">Chi siamo</a>
