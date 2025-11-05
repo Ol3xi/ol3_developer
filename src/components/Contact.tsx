@@ -2,12 +2,12 @@ import React from 'react';
 
 const Contact: React.FC = () => {
     return (
-        <section id="contatti" className="bg-white py-20">
+        <section id="contatti" className="bg-base py-20">
             <div className="max-w-4xl mx-auto px-4 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                <h2 className="md:text-4xl font-bold text-base mb-4">
                     Contattami
                 </h2>
-                <p className="text-gray-600 mb-10">
+                <p className="text-base mb-10">
                     Hai un’idea o un progetto? Scrivimi, sarò felice di aiutarti!
                 </p>
 
@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
                     <input type="hidden" name="_captcha" value="false" />
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                        <label className="block font-medium text-base mb-1">
                             Nome
                         </label>
                         <input
@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                        <label className="block font-medium text-base mb-1">
                             Email
                         </label>
                         <input
@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                        <label className="block font-medium text-base mb-1">
                             Messaggio
                         </label>
                         <textarea

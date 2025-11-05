@@ -3,12 +3,12 @@ import heroImg from '../assets/web-developer_hero.svg'; // Usa la tua immagine s
 
 const Hero: React.FC = () => {
     return (
-        <section id='home' className="min-h-screen flex items-center bg-gray-50 pt-20">
+        <section id='home' className="min-h-screen flex items-center bg-base pt-20">
             <div className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
 
                 {/* Testo */}
                 <div className="text-center md:text-left flex-1">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    <h1 className="md:text-5xl font-bold text-base mb-4">
                         Sviluppo siti web moderni su misura
                     </h1>
                     <p className="text-lg text-gray-600 mb-6">
