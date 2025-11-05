@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Privacy: React.FC = () => {
     return (
-        <div className="min-h-screen bg-white text-gray-800 px-6 py-20 max-w-3xl mx-auto">
+        <div className="min-h-screen bg-base text-base px-6 py-20 max-w-3xl mx-auto">
             <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
 
             <p className="text-sm leading-relaxed">
