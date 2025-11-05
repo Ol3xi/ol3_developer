@@ -21,12 +21,12 @@ const services = [
 
 const Services: React.FC = () => {
     return (
-        <section id='servizi' className="bg-white py-20">
+        <section id='servizi' className="bg-base py-20">
             <div className="max-w-7xl mx-auto px-4 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                <h2 className="md:text-4xl font-bold text-base mb-4">
                     Cosa posso offrirti
                 </h2>
-                <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+                <p className="text-base mb-12 max-w-2xl mx-auto">
                     Offro soluzioni moderne, personalizzate e ottimizzate per la tua presenza online.
                 </p>
 
@@ -34,11 +34,11 @@ const Services: React.FC = () => {
                     {services.map((service, idx) => (
                         <div
                             key={idx}
-                            className="bg-gray-50 rounded-xl p-6 shadow hover:shadow-lg transition hover:-translate-y-1"
+                            className="bg-base rounded-xl p-6 dark:shadow-gray-200 shadow hover:shadow-lg transition hover:-translate-y-1"
                         >
                             <div className="mb-4 flex justify-center">{service.icon}</div>
-                            <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
-                            <p className="text-gray-600 text-sm">{service.desc}</p>
+                            <h3 className="font-semibold text-base mb-2">{service.title}</h3>
+                            <p className="text-base">{service.desc}</p>
                         </div>
                     ))}
                 </div>
