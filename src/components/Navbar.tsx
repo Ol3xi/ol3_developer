@@ -3,8 +3,13 @@ import ThemeToggle from './ThemeToggle';
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-
     const toggleMenu = () => setIsOpen(!isOpen);
+    const navItems = [
+        { href: "#home", label: "Home" },
+        { href: "#servizi", label: "Servizi" },
+        { href: "#chiSiamo", label: "Chi siamo" },
+        { href: "#contatti", label: "Contatti" },
+    ];
 
     return (
         <nav className="bg-base-200 shadow-md fixed top-0 left-0 w-full z-50">
@@ -16,23 +21,27 @@ const Navbar: React.FC = () => {
                 </div>
 
                 {/* Desktop menu */}
-                <div className='flex flex-row items-center'>
-                    <div className='mr-4'>
-                        <ThemeToggle/>
+                <div className="flex flex-row items-center">
+                    <div className="hidden md:flex space-x-4 text-base font-bold items-center">
+                        {navItems.map((item) => (
+                            <a
+                                key={item.href}
+                                href={item.href}
+                                className="hover:text-blue-600 transition dark:text-gray-300 "
+                            >
+                                {item.label}
+                            </a>
+                        ))}
+                        <ThemeToggle />
                     </div>
-                    <div className="hidden md:flex space-x-4 text-base font-bold">
-                        <a href="#home" className="hover:text-blue-600 transition">Home</a>
-                        <a href="#servizi" className="hover:text-blue-600 transition">Servizi</a>
-                        <a href="#chiSiamo" className="hover:text-blue-600 transition">Chi siamo</a>
-                        <a href="#contatti" className="hover:text-blue-600 transition">Contatti</a>
-                    </div>     
                 </div>
 
                 {/* Mobile menu button */}
-                <div className="md:hidden">
+                <div className="md:hidden flex justify-center gap-2">
+                    <ThemeToggle />
                     <button
                         onClick={toggleMenu}
-                        className="text-gray-700 focus:outline-none"
+                        className="focus:outline-none"
                     >
                         <svg
                             className="w-6 h-6"
@@ -64,10 +73,16 @@ const Navbar: React.FC = () => {
             {/* Mobile menu dropdown */}
             {isOpen && (
                 <div className="md:hidden px-4 pb-4">
-                    <a href="#home" className="block py-2 text-gray-700 hover:text-blue-600">Home</a>
-                    <a href="#servizi" className="block py-2 text-gray-700 hover:text-blue-600">Servizi</a>
-                    <a href="#chiSiamo" className="block py-2 text-gray-700 hover:text-blue-600">Chi siamo</a>
-                    <a href="#contatti" className="block py-2 text-gray-700 hover:text-blue-600">Contatti</a>
+                    {navItems.map((item) => (
+                        <a
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setIsOpen(false)}
+                            className="block py-2 text-gray-300 hover:text-blue-600"
+                        >
+                            {item.label}
+                        </a>
+                    ))}
                 </div>
             )}
         </nav>

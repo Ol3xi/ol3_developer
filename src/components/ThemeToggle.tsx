@@ -15,7 +15,7 @@ export default function ThemeToggle() {
                  bg-slate-200/70 dark:bg-slate-700/70
                  hover:bg-slate-300 dark:hover:bg-slate-600
                  transition-colors focus:outline-none focus:ring-2
-                 focus:ring-slate-400 dark:focus:ring-slate-500"
+                 focus:ring-slate-400 dark:focus:ring-slate-500 "
     >
       {isDark ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
     </button>
